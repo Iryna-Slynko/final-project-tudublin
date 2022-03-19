@@ -23,13 +23,13 @@ spec:
   template:
     metadata:
       labels:
-        app: tudfinalproject/recommendationservice:v1
+        app: recommendationservice
     spec:
       serviceAccountName: default
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: recommendationservice
+        image: tudfinalproject/recommendationservice:v1 
         ports:
         - containerPort: 8080
         readinessProbe:
