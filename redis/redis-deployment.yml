@@ -1,5 +1,7 @@
 # from https://github.com/kubernetes/examples/blob/master/guestbook/redis-master-deployment.yaml
 apiVersion: apps/v1
+kind: Deployment
+metadata:
   name: redis
 spec:
   selector:
