@@ -1,34 +1,29 @@
-apiVersion: v1
-items:
-- apiVersion: argoproj.io/v1alpha1
-  kind: Application
-  metadata:
-    name: boutique
-    namespace: argocd
-  spec:
-    destination:
-      namespace: boutique
-      server: https://kubernetes.default.svc
-    project: default
-    source:
-      path: boutique
-      repoURL: https://github.com/Iryna-Slynko/final-project-tudublin.git
-    syncPolicy:
-      automated: {}
-- apiVersion: argoproj.io/v1alpha1
-  kind: Application
-  metadata:
-    name: redis
-    namespace: argocd
-  spec:
-    destination:
-      namespace: boutique
-      server: https://kubernetes.default.svc
-    project: default
-    source:
-      path: redis
-      repoURL: https://github.com/Iryna-Slynko/final-project-tudublin.git
-kind: List
+apiVersion: argoproj.io/v1alpha1
+kind: Application
 metadata:
-  resourceVersion: ""
-  selfLink: ""
+  name: boutique
+  namespace: argocd
+spec:
+  destination:
+    namespace: boutique
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: boutique
+    repoURL: https://github.com/Iryna-Slynko/final-project-tudublin.git
+  syncPolicy:
+    automated: {}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: redis
+  namespace: argocd
+spec:
+  destination:
+    namespace: boutique
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: redis
+    repoURL: https://github.com/Iryna-Slynko/final-project-tudublin.git
