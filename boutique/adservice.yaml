@@ -29,7 +29,7 @@ spec:
       terminationGracePeriodSeconds: 5
       containers:
       - name: server
-        image: tudfinalproject/adservice:v1
+        image: tudfinalproject/adservice:v10
         ports:
         - containerPort: 9555
         env:
