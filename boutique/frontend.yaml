@@ -30,7 +30,7 @@ spec:
       serviceAccountName: default
       containers:
         - name: server
-          image: tudfinalproject/frontend:v1
+          image: tudfinalproject/frontend:v2
           ports:
           - containerPort: 8080
           readinessProbe:
